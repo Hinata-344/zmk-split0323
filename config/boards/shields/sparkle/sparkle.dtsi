@@ -1,7 +1,7 @@
 /*
- * Custom Lily58 shield override for Seeed Studio XIAO-compatible boards.
+ * Custom Sparkle shield override for Seeed Studio XIAO-compatible boards.
  *
- * This keeps the stock Lily58 keymap/layout but switches the matrix GPIO
+ * This keeps the stock Sparkle keymap/layout but switches the matrix GPIO
  * references from the Pro Micro interconnect to the Seeed XIAO interconnect.
  */
 

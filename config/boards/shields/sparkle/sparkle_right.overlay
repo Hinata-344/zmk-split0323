@@ -1,8 +1,12 @@
 /*
- * Left half column GPIO mapping for the XIAO BLE Lily58 override.
+ * Right half column GPIO mapping for the XIAO BLE Sparkle override.
  */
 
-#include "lily58.dtsi"
+#include "sparkle.dtsi"
+
+&default_transform {
+    col-offset = <6>;
+};
 
 &kscan0 {
     col-gpios

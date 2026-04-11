@@ -1,6 +1,6 @@
 file_format: "1"
-id: lily58
-name: Lily58
+id: sparkle
+name: Sparkle
 type: shield
 url: https://github.com/kata0510/Lily58
 requires: [seeed_xiao]
@@ -8,5 +8,5 @@ features:
   - keys
   - studio
 siblings:
-  - lily58_left
-  - lily58_right
+  - sparkle_left
+  - sparkle_right
