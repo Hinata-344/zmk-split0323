@@ -1,5 +1,5 @@
 /*
- * Right half column GPIO mapping for the XIAO BLE Sparkle override.        Qqqqw   eqewewwerwrwtretetwww
+ * Right half column GPIO mapping for the XIAO BLE Sparkle override.
  */
 
 #include "sparkle.dtsi"
