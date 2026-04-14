@@ -33,7 +33,7 @@
 #define JP_RPAREN       LEFT_PARENTHESIS  // )
 #define JP_LBRACE       RIGHT_BRACE       // {
 #define JP_RBRACE       PIPE              // }?        // 英数
-#define JP_HANZEN       GRAVE             // 半角/全角
+#define JP_HANZEN       GRAVE             // 半角/全角@@@@[[[[@@@@@]]]]
 
 
 
@@ -54,16 +54,16 @@
 
         default_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   ^   |
+// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
-// |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   :   |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |   @    |  |  [    |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+// |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //                     | opt  | com  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | com   |
             bindings = <
-&kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp JP_CARET
+&kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp  JP_UNDERSCORE
 &kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O   &kp P    &kp MINUS
-&kp LCTRL &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp JP_COLON &kp JP_QUOTE
-&kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B  &kp JP_AT &kp JP_LBRACKET &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+&kp LCTRL &kp A  &kp S  &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp JP_COLON
+&kp LANG2 &kp Z  &kp X  &kp C    &kp V    &kp B  &kp JP_LPAREN   &kp JP_RPAREN &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp LANG1
                         &kp LALT &kp LGUI &mo 1  &kp SPACE  &kp RET  &mo 2  &kp LANG2 &kp LANG1
             >;
 
@@ -74,16 +74,17 @@
 // -------------------------------------------------SHIFT-------------------------------------------------------
 // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
 // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-// |  BTCLR| BT1 | BT2 | BT3  | BT4  | BT5  |                   |   &  |   '   |   "   |  (   |   )   |   ~   |
-// |       | F1  | F2  | F3   | F4   | F5   |                   |  F6  |   _   |   +   |   {  |   }   |   |   |
-// |       | F7  | F8  | F9   | F10  | F11  |        |  |       |  F12 |       |       |      |       |       |
+// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
+// |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
+// |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
+// |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
 //                     |      |      |      |        |  |       |      |       |       |
             bindings = <
-&bt BT_CLR_ALL &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4          &kp JP_AMPERSAND &kp JP_QUOTE &kp JP_DQUOTE &kp JP_LPAREN &kp JP_RPAREN &kp JP_TILDE
-&kp F1         &kp F2       &kp F3       &kp F4       &kp F5       &kp F6                &kp F7           &kp JP_UNDERSCORE &kp JP_PLUS &kp JP_LBRACE &kp JP_RBRACE &kp JP_PIPE
-&none          &none        &none        &none        &none        &none                 &none            &none             &none       &none         &none         &none
-&none          &none        &none        &none        &none        &none &none &none     &none            &none             &none       &none         &none         &none
-                                    &none     &none     &none     &none   &kp DEL    &none     &none     &none
+&kp LS(ESC)   &kp EXCL   &kp DQT    &kp HASH   &kp DLLR   &kp PRCNT                      &kp AMPS   &kp APOS   &kp LPAR   &kp RPAR   &kp LS(N0)     &kp JP_PIPE
+&kp LS(TAB)   &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)  &kp LS(T)                      &kp LS(Y)  &kp LS(U)  &kp LS(I)  &kp LS(O)  &kp LS(P)      &kp JP_TILDE
+&kp LS(LCTRL) &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)  &kp LS(G)                      &kp LS(H)  &kp LS(J)  &kp LS(K)  &kp LS(L)  &kp JP_AT   &kp JP_QUOTE
+&kp LS(LSHFT) &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)  &kp LS(B)  &kp JP_LBRACE &kp JP_RBRACE   &kp LS(N)  &kp LS(M)  &none     &none     &kp BSLH       &none
+                                    &none     &none     &kp LSHFT     &none   &kp DEL    &none     &none     &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -92,15 +93,15 @@
         raise_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// | 半/全 |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |   ¥   |
+// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
 // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
 // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
 //                     |      |      |      |        |  |       |      |       |       |
             bindings = <
 &kp F1    &kp F2    &kp F3      &kp F4      &kp F5      &kp F6                       &kp F7      &kp F8    &kp F9    &kp F10    &kp F11     &kp F12
-&kp JP_HANZEN &kp N1    &kp N2      &kp N3      &kp N4      &kp N5                   &kp N6      &kp N7    &kp N8    &kp N9     &kp N0      &kp JP_YEN
-&none        &kp EQUAL &kp SLASH   &kp STAR    &kp MINUS   &kp JP_PLUS               &none       &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT   &none
-&none        &none     &none       &none       &kp JP_CARET &kp JP_PIPE &kp JP_LBRACKET &kp JP_RBRACKET &kp KP_PLUS &kp MINUS &kp JP_EQUAL &kp JP_LBRACKET &kp JP_RBRACKET &none
+&none    &none    &none      &none     &none   &none                     &none     &none  &kp UP    &none    &none     &none
+&none    &kp JP_EQUAL &kp SLASH   &kp JP_ASTERISK    &kp MINUS   &kp JP_PLUS                     &none      &kp LEFT  &kp DOWN  &kp RIGHT  &none      &none
+&none    &none    &none      &none      &kp JP_CARET   &kp JP_PIPE  &kp JP_LBRACKET  &kp JP_RBRACKET &none &none &none &none   &none    &none
                                 &none      &none      &none    &kp BSPC  &none   &none      &none    &none
             >;
 
