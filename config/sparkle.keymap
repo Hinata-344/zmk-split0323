@@ -84,7 +84,7 @@
                 &kp LS(TAB)   &kp LS(Q)   &kp LS(W)   &kp LS(E)       &kp LS(R)     &kp LS(T)                                       &kp LS(Y)     &kp LS(U)     &kp LS(I)     &kp LS(O)   &kp LS(P)      &kp JP_TILDE
                 &kp LS(LCTRL) &kp LS(A)   &kp LS(S)   &kp LS(D)       &kp LS(F)     &kp LS(G)                                       &kp LS(H)     &kp LS(J)     &kp LS(K)     &kp LS(L)   &kp JP_AT      &kp JP_QUOTE
                 &kp LS(LSHFT) &kp LS(Z)   &kp LS(X)   &kp LS(C)       &kp LS(V)     &kp LS(B)    &kp JP_LBRACE    &kp JP_RBRACE   &kp LS(N)     &kp LS(M)   &none          &none       &kp BSLH &none
-                                                  &none &none         &none      &none        &kp DEL           &mo 3         &none         &none
+                                                  &none &none         &trans     &none        &kp DEL           &trans        &none         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -102,7 +102,7 @@
                 &none     &none          &none        &none            &none          &none                       &none              &none        &kp UP       &none       &none         &none
                 &none     &kp JP_EQUAL   &kp SLASH    &kp JP_ASTERISK  &kp MINUS      &kp JP_PLUS                 &none              &kp LEFT     &kp DOWN     &kp RIGHT   &none         &none
                 &none     &none          &none        &none            &kp JP_CARET   &kp JP_PIPE   &kp JP_LBRACKET   &kp JP_RBRACKET   &none        &none       &none         &none     &none    &none
-                                         &none        &none            &mo 3          &kp BSPC      &none                       &none             &none        &none
+                                         &none        &none            &trans         &kp BSPC      &none                       &trans            &none        &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
