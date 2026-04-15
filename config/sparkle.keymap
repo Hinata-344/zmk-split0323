@@ -84,7 +84,7 @@
                 &kp LS(TAB)   &kp LS(Q)   &kp LS(W)   &kp LS(E)       &kp LS(R)     &kp LS(T)                                       &kp LS(Y)     &kp LS(U)     &kp LS(I)     &kp LS(O)   &kp LS(P)      &kp JP_TILDE
                 &kp LS(LCTRL) &kp LS(A)   &kp LS(S)   &kp LS(D)       &kp LS(F)     &kp LS(G)                                       &kp LS(H)     &kp LS(J)     &kp LS(K)     &kp LS(L)   &kp JP_AT      &kp JP_QUOTE
                 &kp LS(LSHFT) &kp LS(Z)   &kp LS(X)   &kp LS(C)       &kp LS(V)     &kp LS(B)    &kp JP_LBRACE    &kp JP_RBRACE   &kp LS(N)     &kp LS(M)   &none          &none       &kp BSLH &none
-                                                  &none &none         &kp LSHFT      &none        &kp DEL           &none         &none         &none
+                                                  &none &none         &none      &none        &kp DEL           &none         &none         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -111,12 +111,12 @@
         adjust_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |BT CLR | BT1 | BT2 | BT3  | BT4  | BT5  |                   |      |      |      |      |      | BOOT |
-// |       |     |     |      |      |      |                   |      |      |      |      |      |      |
+// |       |     |     |      |      |      |                   |      |      |      |      |      |      |!*******!!!
 // |       |     |     |      |      |      |                   |      | Prev | Play | Next |      |      |
 // |       |     |     |      |      |      |        |  |       | Mute | Vol- | Vol+ |      |      |      |
 //                     |      |      |      |        |  |       |      |      |      |
             bindings = <
-                &bt BT_CLR_ALL &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4             &none         &none         &none         &none         &none         &bootloader
+                &bt BT_CLR_ALL &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4             &kp A         &none         &none         &none         &none         &bootloader
                 &none          &none          &none          &none          &none          &none                    &none         &none         &none         &none         &none         &none
                 &none          &none          &none          &none          &none          &none                    &none         &kp C_PREV    &kp C_PP      &kp C_NEXT    &none         &none
                 &none          &none          &none          &none          &none          &none      &none         &none         &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &none      &none    &none
