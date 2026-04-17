@@ -32,7 +32,7 @@
 #define JP_LPAREN       ASTERISK          // (
 #define JP_RPAREN       LEFT_PARENTHESIS  // )
 #define JP_LBRACE       RIGHT_BRACE       // {
-#define JP_RBRACE       PIPE              // }
+#define JP_RBRACE       PIPE              // }asaAAAaaaAAAaa
 #define JP_HANZEN       GRAVE             // 半角/全角
 
 
@@ -82,9 +82,27 @@
             bindings = <
                 &kp LS(ESC)   &kp EXCL    &kp DQT     &kp HASH        &kp DLLR      &kp PRCNT                                       &kp AMPS      &kp APOS      &kp LPAR      &kp RPAR    &kp LS(N0)     &kp JP_PIPE
                 &kp LS(TAB)   &kp LS(Q)   &kp LS(W)   &kp LS(E)       &kp LS(R)     &kp LS(T)                                       &kp LS(Y)     &kp LS(U)     &kp LS(I)     &kp LS(O)   &kp LS(P)      &kp JP_TILDE
-                &kp LS(LSHFT) &kp LS(A)   &kp LS(S)   &kp LS(D)       &kp LS(F)     &kp LS(G)                                       &kp LS(H)     &kp LS(J)     &kp LS(K)     &kp LS(L)   &kp JP_AT      &kp JP_QUOTE
+                &mo 4         &kp LS(A)   &kp LS(S)   &kp LS(D)       &kp LS(F)     &kp LS(G)                                       &kp LS(H)     &kp LS(J)     &kp LS(K)     &kp LS(L)   &kp JP_AT      &kp JP_QUOTE
                 &kp LS(LANG2) &kp LS(Z)   &kp LS(X)   &kp LS(C)       &kp LS(V)     &kp LS(B)    &kp JP_LBRACE    &kp JP_RBRACE   &kp LS(N)     &kp LS(M)   &none          &none       &kp BSLH &none
                                                   &kp LS(LALT) &kp LS(LGUI)         &trans     &kp LS(SPACE)        &kp DEL           &trans        &none         &none
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        lower_shift_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |      |     |     |      |      |      |                   |      |      |      |      |      |       |
+// |      |     |     |      |      |      |                   |      |      |      |      |      |       |
+// | hold |     |     |      |      |      |                   |      |      |      |      |      |       |
+// |      |     |     |      |      |      |        |  |       |      |      |      |      |      |       |
+//                     |      |      |      |        |  |       |      |      |      |
+            bindings = <
+                &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans &trans &trans
+                                     &trans &trans &trans   &trans &trans &trans &trans &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -111,7 +129,7 @@
         adjust_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |BT CLR | BT1 | BT2 | BT3  | BT4  | BT5  |                   |      |      |      |      |      | BOOT |
-// |       |     |     |      |      |      |                   |      |      |      |      |      |      |!*******!!!
+// |       |     |     |      |      |      |                   |      |      |      |      |      |      |
 // |       |     |     |      |      |      |                   |      | Prev | Play | Next |      |      |
 // |       |     |     |      |      |      |        |  |       | Mute | Vol- | Vol+ |      |      |      |
 //                     |      |      |      |        |  |       |      |      |      |
