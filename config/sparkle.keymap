@@ -91,7 +91,7 @@
                 &kp LS(TAB)   &kp LS(Q)   &kp LS(W)   &kp LS(E)       &kp LS(R)     &kp LS(T)                                       &kp LS(Y)     &kp LS(U)     &kp LS(I)     &kp LS(O)   &kp LS(P)      &kp JP_TILDE
                 &kp LSHIFT &kp LS(A)   &kp LS(S)   &kp LS(D)       &kp LS(F)     &kp LS(G)                                       &kp LS(H)     &kp LS(J)     &kp LS(K)     &kp LS(L)   &kp JP_AT      &kp JP_QUOTE
                 &kp LSHIFT &kp LS(Z)   &kp LS(X)   &kp LS(C)       &kp LS(V)     &kp LS(B)    &kp JP_LBRACE    &kp JP_RBRACE   &kp LS(N)     &kp LS(M)   &kp QMARK          &none       &kp BSLH &mo LAYER_LOWER_SHIFT
-                                                  &kp LS(LALT) &kp LS(LGUI)        &mo LAYER_RAISE     &kp DEL &kp LS(RET)              &none      &none         &none
+                                                  &kp LS(LALT) &kp LS(LGUI)        &mo LAYER_RAISE     &kp BSPC     &kp LS(RET)            &none      &none         &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -127,7 +127,7 @@
                 &none     &none          &none        &kp UP            &none          &none                       &none              &none        &none       &none       &none         &none
                 &mo LAYER_LOWER_SHIFT      &none  &kp LEFT     &kp DOWN     &kp RIGHT   &none                 &kp JP_PLUS     &kp MINUS   &kp JP_ASTERISK &kp SLASH    &kp JP_EQUAL      &none   
                 &none       &none         &none     &none    &none   &none &kp JP_LBRACKET   &kp JP_RBRACKET   &kp JP_PIPE    &kp JP_CARET                    &none     &none          &none        &none           
-                                         &none        &none            &mo LAYER_LOWER      &none   &kp BSPC                     &none            &none        &none
+                                         &none        &none            &mo LAYER_LOWER      &none   &kp DEL                 &none            &none        &none
             >;
                                                                                                                                    
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
