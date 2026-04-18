@@ -71,7 +71,7 @@
                 &kp TAB   &kp Q     &kp W     &kp E           &kp R         &kp T                        &kp Y         &kp U         &kp I        &kp O       &kp P         &kp MINUS
                 &kp RSHIFT &kp A     &kp S     &kp D           &kp F         &kp G                        &kp H         &kp J         &kp K        &kp L       &kp SEMI      &kp JP_COLON
                 &kp LANG2 &kp Z     &kp X     &kp C           &kp V         &kp B      &kp JP_LPAREN     &kp JP_RPAREN &kp N         &kp M       &kp COMMA     &kp DOT     &kp FSLH &kp LANG1
-                                           &kp LALT &kp LGUI  &mo LAYER_LOWER &kp SPACE   &kp RET           &mo LAYER_RAISE &kp CAPS &kp LCTRL
+                                           &kp LALT &kp LGUI  &lt LAYER_LOWER LANG2 &kp SPACE   &kp RET           &lt LAYER_RAISE LANG1 &kp CAPS &kp LCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -83,11 +83,11 @@
 // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
 // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
 // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-// |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
+// |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |))::::)))))))::''':::'''''''''''''''')))))000)))))))))))0000000000000))))))
 // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
 //                     |      |      |      |        |  |       |      |       |       |
             bindings = <
-                &kp LS(ESC)   &kp EXCL    &kp DQT     &kp HASH        &kp DLLR      &kp PRCNT                                       &kp AMPS      &kp APOS      &kp LPAR      &kp RPAR    &kp LS(N0)     &kp JP_PIPE
+                &kp LS(ESC)   &kp EXCL    &kp DQT     &kp HASH        &kp DLLR      &kp PRCNT                                       &kp JP_AMPERSAND      &kp JP_QUOTE      &kp JP_LPAREN      &kp JP_RPAREN    &kp LS(N0)     &kp JP_PIPE
                 &kp LS(TAB)   &kp LS(Q)   &kp LS(W)   &kp LS(E)       &kp LS(R)     &kp LS(T)                                       &kp LS(Y)     &kp LS(U)     &kp LS(I)     &kp LS(O)   &kp LS(P)      &kp JP_TILDE
                 &mo LAYER_LOWER_SHIFT &kp LS(A)   &kp LS(S)   &kp LS(D)       &kp LS(F)     &kp LS(G)                                       &kp LS(H)     &kp LS(J)     &kp LS(K)     &kp LS(L)   &kp JP_AT      &kp JP_QUOTE
                 &kp LS(LANG2) &kp LS(Z)   &kp LS(X)   &kp LS(C)       &kp LS(V)     &kp LS(B)    &kp JP_LBRACE    &kp JP_RBRACE   &kp LS(N)     &kp LS(M)   &kp QMARK          &none       &kp BSLH &none
@@ -102,7 +102,7 @@
 // |      |     |     |      |      |      |                   |      |      |      |      |      |       |
 // |      |     |     |      |      |      |                   |      |      |      |      |      |       |
 // | hold |     |     |      |      |      |                   |      |      |      |      |      |       |
-// |      |     |     |      |      |      |        |  |       |      |      |      |      |      |       |
+// |      |     |     |      |      |      |        |  |       |      |      |      |      |      |       |]]]]]
 //                     |      |      |      |        |  |       |      |      |      |
             bindings = <
                 &none &none &none &none &none &none   &none &none &none &none &none &none
