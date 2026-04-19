@@ -16,7 +16,7 @@
 #define JP_DQUOTE       AT                // "
 #define JP_AMPERSAND    CARET             // &
 #define JP_QUOTE        AMPERSAND         // '
-#define JP_EQUAL        UNDER             // =
+#define JP_EQUAL        UNDER             // =＠
 #define JP_CARET        EQUAL             // ^
 #define JP_YEN          0x89              // ¥
 #define JP_PLUS         COLON             // +
@@ -62,7 +62,7 @@
         default_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
-// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
+// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |@
 // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //                     | opt  | com  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | com   |
@@ -80,17 +80,17 @@
         lower_layer {
 // -------------------------------------------------SHIFT-------------------------------------------------------lj
 // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |o_o8ooo9k___
-// |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
+// |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |sDDDDKKKK
+// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |LJJ?J?JP_AMPERSAND
 // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
 // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
 // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
 //                     |      |      |      |        |  |       |      |       |       |
             bindings = <
-                &kp LS(ESC)   &kp EXCL    &kp DQT     &kp HASH        &kp DLLR      &kp PRCNT                                       &kp JP_AMPERSAND      &kp JP_QUOTE      &kp JP_LPAREN      &kp JP_RPAREN    &kp LS(N0)     &kp JP_AT
+                &kp LS(ESC)   &kp EXCL    &kp JP_DQUOTE     &kp HASH        &kp DLLR      &kp PRCNT                                       &kp JP_AMPERSAND      &kp JP_QUOTE      &kp JP_LPAREN      &kp JP_RPAREN    &kp LS(N0)     &kp JP_AT
                 &kp LS(TAB)   &kp LS(Q)   &kp LS(W)   &kp LS(E)       &kp LS(R)     &kp LS(T)                                       &kp LS(Y)     &kp LS(U)     &kp LS(I)     &kp LS(O)   &kp LS(P)      &kp JP_TILDE
-                &kp LCTRL &kp LS(A)   &kp LS(S)   &kp LS(D)       &kp LS(F)     &kp LS(G)                                       &kp LS(H)     &kp LS(J)     &kp LS(K)     &kp LS(L)   &kp QMARK      &kp JP_YEN
-                &kp LSHIFT &kp LS(Z)   &kp LS(X)   &kp LS(C)       &kp LS(V)     &kp LS(B)    &kp JP_LBRACE    &kp JP_RBRACE   &kp LS(N)     &kp LS(M)   &kp LT          &kp GT       &kp BACKSLASH &mo 1
+                &kp LCTRL &kp LS(A)   &kp LS(S)   &kp LS(D)       &kp LS(F)     &kp LS(G)                                       &kp LS(H)     &kp LS(J)     &kp LS(K)     &kp LS(L)   &kp JP_DQUOTE &kp JP_YEN
+                &kp LSHIFT &kp LS(Z)   &kp LS(X)   &kp LS(C)       &kp LS(V)     &kp LS(B)    &kp JP_LBRACE    &kp JP_RBRACE   &kp LS(N)     &kp LS(M)   &kp LT          &kp GT       &kp QMARK &kp EXCL
                                                   &kp LS(LALT) &kp LS(LGUI)        &mo LAYER_RAISE     &kp BSPC     &kp LS(RET)            &none      &none         &none
             >;
 
@@ -102,12 +102,12 @@
 // |      |     |     |      |      |      |                   |      |      |      |      |      |       |
 // |      |     |     |      |      |      |                   |      |      |      |      |      |       |
 // | hold |     |     |      |      |      |                   |      |      |      |      |      |       |
-// |      |     |     |      |      |      |        |  |       |      |      |      |      |      |       |
+// |      |     |     |      |      |      |        |  |       |      |      |      |      |      |       |    **-/^^^　 
 //                     |      |      |      |        |  |       |      |      |      |
             bindings = <
                 &none &none &none &none &none &none   &none &none &none &none &none &none
                 &none &none &none &kp SPACE &none &none   &none &none &none &none &none &none
-                 &none &none &none &none &none &none  &kp LGUI &none &kp LC(LS(TAB)) &kp C_PP &kp LC(TAB) &none  
+                 &none &none &none &none &none &none  &kp LGUI &none &kp LC(LS(LEFT)) &kp C_PP &kp LC(RIGHT) &none  
                 &none &none &none &none &none &none   &none &none &none &none &none &none &none &none
                                      &none &none &kp LGUI    &none &none &none &none &none
             >;
@@ -125,7 +125,7 @@
             bindings = <
                 &kp F1    &kp F2         &kp F3       &kp F4           &kp F5         &kp F6                      &kp F7             &kp F8       &kp F9       &kp F10     &kp F11       &kp F12
                 &none     &none          &kp LG(SPACE)        &kp UP             &none          &none                       &none              &none        &none       &none       &none         &none
-                &mo LAYER_LOWER_SHIFT      &kp LEFT  &kp LEFT     &kp DOWN     &kp RIGHT   &none                 &kp JP_PLUS     &kp MINUS   &kp JP_ASTERISK &kp SLASH    &kp JP_EQUAL      &none   
+                    &kp LEFT  &kp LEFT     &kp DOWN     &kp RIGHT   &none                 &kp JP_PLUS     &kp MINUS   &kp JP_ASTERISK &kp SLASH    &kp JP_EQUAL      &none   
                 &none       &kp LG(Z)         &kp LG(X)     &kp LG(C)    &kp LG(V)   &none &kp JP_LBRACKET   &kp JP_RBRACKET   &kp JP_PIPE    &kp JP_CARET                    &none     &none          &none        &none           
                                          &none        &none            &mo LAYER_LOWER      &none   &kp DEL                 &none            &none        &none
             >;
