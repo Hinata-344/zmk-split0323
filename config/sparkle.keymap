@@ -68,7 +68,7 @@
         };
     };
 
-    conditional_layers {
+x     conditional_layers {
         compatible = "zmk,conditional-layers";
 
         tri_layer {
@@ -82,7 +82,7 @@
 
         default_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
+// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |J
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |@
 // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
@@ -148,7 +148,7 @@
                 &none     &none          &kp LG(SPACE)        &kp UP             &kp LG(R)          &none                       &none              &none        &none       &none       &none         &none
                 &none    &kp LG(A)  &kp LEFT     &kp DOWN     &kp RIGHT   &none                 &kp JP_PLUS     &kp MINUS   &kp JP_ASTERISK &kp SLASH    &kp JP_EQUAL      &none   
                 &none       &kp LG(Z)         &kp LG(X)     &kp LG(C)    &kp LG(V)   &none &kp JP_LBRACKET   &kp JP_RBRACKET   &kp JP_PIPE    &kp JP_CARET                    &none     &none          &none        &none           
-                                         &none        &none            &mo LAYER_LOWER      &none   &kp DEL                 &none            &none        &none
+                                         &none        &none            &none      &none   &kp DEL                 &mo LAYER_LOWER            &none        &none
             >;
                                                                                                                                    
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
