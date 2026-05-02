@@ -98,18 +98,6 @@
         };
     };
 
-    /*
-     * Mouse move acceleration tuning
-     * - acceleration-exponent:
-     *   0 = constant speed (no acceleration)
-     *   1 = constant acceleration (default for &mmv)
-     *   2 = stronger acceleration
-     */
-    &mmv {
-        time-to-max-speed-ms = <0>;
-        acceleration-exponent = <0>;
-    };
-
      conditional_layers {
         compatible = "zmk,conditional-layers";
 
@@ -214,4 +202,16 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
+};
+
+/*
+ * Mouse move acceleration tuning
+ * - acceleration-exponent:
+ *   0 = constant speed (no acceleration)
+ *   1 = constant acceleration (default for &mmv)
+ *   2 = stronger acceleration
+ */
+&mmv {
+    time-to-max-speed-ms = <0>;
+    acceleration-exponent = <0>;
 };
