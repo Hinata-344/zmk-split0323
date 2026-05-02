@@ -46,6 +46,9 @@
 #define LAYER_RAISE        3
 #define LAYER_ADJUST       4
 
+// &lt (layer-tap) の判定時間(ミリ秒)。短くすると「ホールド」になりやすく、長くすると「タップ」になりやすい
+#define LT_LANG_TAPPING_TERM_MS 170
+
 
 
 
@@ -69,6 +72,26 @@
                 &kp N0
                 &kp RET
             >;
+        };
+
+        // &lt LAYER_RAISE LANG2 / &lt LAYER_LOWER LANG1 の判定時間を個別に調整したい場合は
+        // ここ( tapping-term-ms )を変更して、下の keymap では &lt_* を使う
+        lt_raise_lang2: lt_raise_lang2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_RAISE_LANG2";
+            #binding-cells = <2>;
+            tapping-term-ms = <LT_LANG_TAPPING_TERM_MS>;
+            flavor = "tap-preferred";
+            bindings = <&mo &kp>;
+        };
+
+        lt_lower_lang1: lt_lower_lang1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_LOWER_LANG1";
+            #binding-cells = <2>;
+            tapping-term-ms = <LT_LANG_TAPPING_TERM_MS>;
+            flavor = "tap-preferred";
+            bindings = <&mo &kp>;
         };
     };
 
@@ -96,7 +119,7 @@
                 &kp TAB   &kp Q     &kp W     &kp E           &kp R         &kp T                        &kp Y         &kp U         &kp I        &kp O       &kp P         &kp MINUS
                 &kp LCTRL &kp A     &kp S     &kp D           &kp F         &kp G                        &kp H         &kp J         &kp K        &kp L       &kp SEMI      &kp JP_COLON
                 &kp LSHIFT &kp Z     &kp X     &kp C           &kp V         &kp B      &kp JP_LPAREN     &kp JP_RPAREN &kp N         &kp M       &kp COMMA     &kp DOT     &kp FSLH &kp CAPS
-                                           &kp LALT &kp LGUI  &lt LAYER_RAISE LANG2 &kp SPACE   &kp RET           &lt LAYER_LOWER LANG1 &none &none
+                                           &kp LALT &kp LGUI  &lt_raise_lang2 LAYER_RAISE LANG2 &kp SPACE   &kp RET           &lt_lower_lang1 LAYER_LOWER LANG1 &none &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -151,7 +174,7 @@
                 &kp F1    &kp F2         &kp F3       &kp F4           &kp F5         &kp F6                      &kp F7             &kp F8       &kp F9       &kp F10     &kp F11       &kp F12
                 &none     &none          &kp LG(SPACE)        &kp UP             &kp C_PP          &none                       &none              &none        &none       &none       &none         &none
                 &none    &none   &kp LEFT     &kp DOWN     &kp RIGHT   &none                 &kp JP_PLUS     &kp MINUS   &kp JP_ASTERISK &kp SLASH    &kp JP_EQUAL      &none   
-                &none       &none          &none      &none     &none    &none &kp JP_LBRACKET   &kp JP_RBRACKET   &kp JP_PIPE    &kp JP_CARET                    &none     &none          &none        &none           
+                &kp BSPC       &none          &none      &none     &none    &none &kp JP_LBRACKET   &kp JP_RBRACKET   &kp JP_PIPE    &kp JP_CARET                    &none     &none          &none        &none           
                                          &none        &none            &none      &none   &kp DEL                 &mo LAYER_LOWER            &none        &none
             >;
                                                                                                                                    
