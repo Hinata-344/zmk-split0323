@@ -11,7 +11,7 @@
 
 // Mouse emulation defaults (see: https://zmk.dev/docs/keymaps/behaviors/mouse-emulation)
 // ZMK default MOVE is 600; bumping a bit makes cursor control usable but not jumpy.
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 900
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 450
 // ZMK default SCRL is 10; keep a slightly faster step.
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 #include <dt-bindings/zmk/pointing.h>
