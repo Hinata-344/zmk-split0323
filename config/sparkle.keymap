@@ -98,6 +98,18 @@
         };
     };
 
+    /*
+     * Mouse move acceleration tuning
+     * - acceleration-exponent:
+     *   0 = constant speed (no acceleration)
+     *   1 = constant acceleration (default for &mmv)
+     *   2 = stronger acceleration
+     */
+    &mmv {
+        time-to-max-speed-ms = <0>;
+        acceleration-exponent = <0>;
+    };
+
      conditional_layers {
         compatible = "zmk,conditional-layers";
 
