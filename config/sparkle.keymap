@@ -11,9 +11,9 @@
 
 // Mouse emulation defaults (see: https://zmk.dev/docs/keymaps/behaviors/mouse-emulation)
 // ZMK default MOVE is 600; bumping a bit makes cursor control usable but not jumpy.
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 450
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 250
 // ZMK default SCRL is 10; keep a slightly faster step.
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 5
 #include <dt-bindings/zmk/pointing.h>
 
 
@@ -50,7 +50,7 @@
 #define LAYER_ADJUST       4
 
 // &lt (layer-tap) の判定時間(ミリ秒)。短くすると「ホールド」になりやすく、長くすると「タップ」になりやすい
-#define LT_LANG_TAPPING_TERM_MS 170
+#define LT_LANG_TAPPING_TERM_MS 160
 
 
 
@@ -186,7 +186,7 @@
 
         adjust_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |BT CLR | BT1 | BT2 | BT3  | BT4  | BT5  |                   |      |      |      |      |      | BOOT |
+// |BT CLR | BT1 | BT2 | BT3  | BT4  | BT5  |                   |      |      |      |     |      | BOOT |
 // |       |     |     |      |      |      |                   |      |      |      |      |      |      |
 // |       |     |     |      |      |      |                   |      | Prev | Play | Next |      |      |
 // |       |     |     |      |      |      |        |  |       | Mute | Vol- | Vol+ |      |      |      |
