@@ -33,7 +33,7 @@
 #define JP_COLON        SINGLE_QUOTE      // :
 #define JP_ASTERISK     DOUBLE_QUOTES     // *
 #define JP_BACKQUOTE    LEFT_BRACE        // `
-#define JP_UNDERSCORE   LS(INT_RO)        // _
+#define JP_UNDERSCORE   UNDERSCORE        // _
 #define JP_LBRACKET     RIGHT_BRACKET     // [
 #define JP_RBRACKET     BACKSLASH         // ]
 #define JP_LPAREN       ASTERISK          // (
