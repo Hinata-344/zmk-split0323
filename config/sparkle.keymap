@@ -19,28 +19,7 @@
 
 
 
-// OS設定を日本語キーボードのまま使用するための変換定義@!!!!@@@@@@@@@@@@@@
-#define JP_DQUOTE       AT                // "
-#define JP_AMPERSAND    CARET             // &
-#define JP_QUOTE        AMPERSAND         // '
-#define JP_EQUAL        UNDER             // =＠
-#define JP_CARET        EQUAL             // ^
-#define JP_YEN          INT_YEN           // ¥
-#define JP_PLUS         COLON             // +
-#define JP_TILDE        PLUS              // ~
-#define JP_PIPE         LS(INT_YEN)       // |
-#define JP_AT           LEFT_BRACKET      // @
-#define JP_COLON        SINGLE_QUOTE      // :
-#define JP_ASTERISK     DOUBLE_QUOTES     // *
-#define JP_BACKQUOTE    LEFT_BRACE        // `
-#define JP_UNDERSCORE   UNDERSCORE        // _
-#define JP_LBRACKET     RIGHT_BRACKET     // [
-#define JP_RBRACKET     BACKSLASH         // ]
-#define JP_LPAREN       ASTERISK          // (
-#define JP_RPAREN       LEFT_PARENTHESIS  // )
-#define JP_LBRACE       RIGHT_BRACE       // {
-#define JP_RBRACE       PIPE              // }asaAAAaaaAAAaa
-#define JP_HANZEN       GRAVE             // 半角/全角
+// 記号系は ZMK 標準キーコード（US配列相当）を直接使う
 
 // ZMK layer numbers are 0-based.
 #define LAYER_DEFAULT      0
@@ -118,10 +97,10 @@
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //                     | opt  | com  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | com   |
             bindings = <
-                &kp ESC   &kp N1    &kp N2    &kp N3          &kp N4        &kp N5                       &kp N6        &kp N7        &kp N8       &kp N9      &kp N0        &kp JP_UNDERSCORE
+                &kp ESC   &kp N1    &kp N2    &kp N3          &kp N4        &kp N5                       &kp N6        &kp N7        &kp N8       &kp N9      &kp N0        &kp UNDERSCORE
                 &kp TAB   &kp Q     &kp W     &kp E           &kp R         &kp T                        &kp Y         &kp U         &kp I        &kp O       &kp P         &kp MINUS
-                &kp LCTRL &kp A     &kp S     &kp D           &kp F         &kp G                        &kp H         &kp J         &kp K        &kp L       &kp SEMI      &kp JP_COLON
-                &kp LSHIFT &kp Z     &kp X     &kp C           &kp V         &kp B      &kp JP_LPAREN     &kp JP_RPAREN &kp N         &kp M       &kp COMMA     &kp DOT     &kp FSLH &kp CAPS
+                &kp LCTRL &kp A     &kp S     &kp D           &kp F         &kp G                        &kp H         &kp J         &kp K        &kp L       &kp SEMI      &kp SINGLE_QUOTE
+                &kp LSHIFT &kp Z     &kp X     &kp C           &kp V         &kp B      &kp LEFT_BRACKET  &kp RIGHT_BRACKET &kp N     &kp M       &kp COMMA     &kp DOT     &kp FSLH &kp CAPS
                                            &kp LALT &kp LGUI  &lt_raise_lang2 LAYER_RAISE LANG2 &kp SPACE   &kp RET           &lt_lower_lang1 LAYER_LOWER LANG1 &none &none
             >;
 
@@ -130,7 +109,7 @@
 
         lower_layer {
 // -------------------------------------------------SHIFT-------------------------------------------------------lj
-// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |o_o8ooo9k___
+// | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |o_o8ooo9k___@@??@@@
 // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |sDDDDKKKK
 // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |LJJ?J?JP_AMPERSAND
 // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
@@ -138,10 +117,10 @@
 // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |######$$$$$$$%%%%%%^^^^^^^^^^^^^^^^^^^^^^^^
 //                     |      |      |      |        |  |       |      |       |       |
             bindings = <
-                &kp LS(ESC)   &kp EXCL    &kp LS(N2)     &kp HASH        &kp DLLR      &kp PRCNT                                       &kp JP_AMPERSAND      &kp JP_QUOTE      &kp JP_LPAREN      &kp JP_RPAREN    &kp LS(N0)     &kp JP_AT
-                &kp LS(TAB)   &kp LS(Q)   &kp LS(W)   &kp LS(E)       &kp LS(R)     &kp LS(T)                                       &kp LS(Y)     &kp LS(U)     &kp LS(I)     &kp LS(O)   &kp LS(P)      &kp JP_TILDE
+                &kp LS(ESC)   &kp EXCL    &kp AT         &kp HASH        &kp DLLR      &kp PRCNT                                       &kp CARET            &kp AMPERSAND     &kp ASTERISK       &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS   &kp TILDE
+                &kp LS(TAB)   &kp LS(Q)   &kp LS(W)   &kp LS(E)       &kp LS(R)     &kp LS(T)                                       &kp LS(Y)     &kp LS(U)     &kp LS(I)     &kp LS(O)   &kp LS(P)      &kp TILDE
                 &kp LCTRL &kp LS(A)   &kp LS(S)   &kp LS(D)       &kp LS(F)     &kp LS(G)                                       &kp LS(H)     &kp LS(J)     &kp LS(K)     &kp LS(L)   &kp QMARK &kp EXCL
-                &kp LSHIFT &kp LS(Z)   &kp LS(X)   &kp LS(C)       &kp LS(V)     &kp LS(B)    &kp JP_LBRACE    &kp JP_RBRACE   &kp LS(N)     &kp LS(M)   &kp LT          &kp GT       &kp JP_DQUOTE &kp JP_YEN
+                &kp LSHIFT &kp LS(Z)   &kp LS(X)   &kp LS(C)       &kp LS(V)     &kp LS(B)    &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp LS(N)    &kp LS(M)   &kp LT          &kp GT       &kp DOUBLE_QUOTES &kp BACKSLASH
                                                   &kp LS(LALT) &kp LS(LGUI)        &mo LAYER_RAISE     &kp BSPC     &kp LS(RET)            &none      &none         &none
             >;
 
@@ -176,8 +155,8 @@
             bindings = <
                 &kp F1    &kp F2         &kp F3       &kp F4           &kp F5         &kp F6                      &kp F7             &kp F8       &kp F9       &kp F10     &kp F11       &kp F12
                 &none     &none          &kp LG(SPACE)        &kp UP             &kp C_PP          &none                       &none              &none        &none       &none       &none         &none
-                &none    &none   &kp LEFT     &kp DOWN     &kp RIGHT   &none                 &kp JP_PLUS     &kp MINUS   &kp JP_ASTERISK &kp SLASH    &kp JP_EQUAL      &none   
-                &kp BSPC       &none          &none      &none     &none    &none &kp JP_LBRACKET   &kp JP_RBRACKET   &kp JP_PIPE    &kp JP_CARET                    &none     &none          &none        &none           
+                &none    &none   &kp LEFT     &kp DOWN     &kp RIGHT   &none                 &kp PLUS        &kp MINUS   &kp ASTERISK    &kp SLASH    &kp EQUAL         &none
+                &kp BSPC       &none          &none      &none     &none    &none &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp PIPE       &kp CARET         &none     &none          &none        &none
                                          &none        &none            &none      &none   &kp DEL                 &mo LAYER_LOWER            &none        &none
             >;
                                                                                                                                    
