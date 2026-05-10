@@ -7,7 +7,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>-"
+#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/outputs.h>
 
 // Mouse emulation defaults (see: https://zmk.dev/docs/keymaps/behaviors/mouse-emulation)
 // ZMK default MOVE is 600; bumping a bit makes cursor control usable but not jumpy.
@@ -117,7 +118,7 @@
 // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |######$$$$$$$%%%%%%^^^^^^^^^^^^^^^^^^^^^^^^
 //                     |      |      |      |        |  |       |      |       |       |
             bindings = <
-                &kp LS(ESC)   &kp EXCL    &kp AT         &kp HASH        &kp DLLR      &kp PRCNT                                       &kp CARET            &kp AMPERSAND     &kp ASTERISK       &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS   &kp TILDE
+                &kp LS(ESC)   &kp EXCL    &kp DOUBLE_QUOTES         &kp HASH        &kp DLLR      &kp PRCNT                                       &kp CARET            &kp AMPERSAND     &kp ASTERISK       &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS   &kp AT
                 &kp LS(TAB)   &kp LS(Q)   &kp LS(W)   &kp LS(E)       &kp LS(R)     &kp LS(T)                                       &kp LS(Y)     &kp LS(U)     &kp LS(I)     &kp LS(O)   &kp LS(P)      &kp TILDE
                 &kp LCTRL &kp LS(A)   &kp LS(S)   &kp LS(D)       &kp LS(F)     &kp LS(G)                                       &kp LS(H)     &kp LS(J)     &kp LS(K)     &kp LS(L)   &kp QMARK &kp EXCL
                 &kp LSHIFT &kp LS(Z)   &kp LS(X)   &kp LS(C)       &kp LS(V)     &kp LS(B)    &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp LS(N)    &kp LS(M)   &kp LT          &kp GT       &kp DOUBLE_QUOTES &kp BACKSLASH
@@ -171,7 +172,7 @@
 // |       |     |     |      |      |      |        |  |       | Mute | Vol- | Vol+ |      |      |      |
 //                     |      |      |      |        |  |       |      |      |      |
             bindings = <
-                &bt BT_CLR &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4             &none         &none         &none         &none         &none         &bootloader
+                &bt BT_CLR &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4             &out OUT_USB   &none         &none         &none         &none         &bootloader
                 &none          &none          &none          &msc SCRL_UP          &none          &none                    &none  &mkp LCLK         &mmv MOVE_UP         &mkp RCLK                  &none         &none
                 &none          &none          &msc SCRL_LEFT          &msc SCRL_DOWN          &msc SCRL_RIGHT &none                   &none        &mmv MOVE_LEFT    &mmv MOVE_DOWN     &mmv MOVE_RIGHT    &none         &none
                 &none     &none &none &none   &none &none    &miyo3180_enter         &none &none &none    &none &none   &none       &none
